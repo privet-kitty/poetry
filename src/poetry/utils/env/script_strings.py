@@ -1,9 +1,12 @@
 from __future__ import annotations
 
+import locale
+
 import packaging.tags
 
 
-GET_SYS_TAGS = f"""
+GET_SYS_TAGS = f"""\
+# encoding: {locale.getpreferredencoding(False)}
 import importlib.util
 import json
 import sys
