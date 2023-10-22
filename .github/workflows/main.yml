@@ -33,11 +33,14 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ä
+        working-directory: あ
     steps:
+      - name: Set locale to ja-JP
+        run: Set-WinSystemLocale ja-JP
+        shell: powershell
       - uses: actions/checkout@v4
         with:
-          path: ä
+          path: あ
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
